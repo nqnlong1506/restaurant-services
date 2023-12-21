@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package delivery;
+
+option go_package = "github.com/nqnlong1506/restaurant-services/delivery";
+
+service Delivery {
+    rpc ReceiveOrder (Order) returns (Response) {}
+}
+
+message Order {
+    string id = 1;
+    string order = 2;
+    string address = 3;
+}
+
+message Response {
+    string message = 1;
+}

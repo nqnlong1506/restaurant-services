@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package kitchen;
+
+option go_package = "github.com/nqnlong1506/restaurant-services/kitchen";
+
+service KitchenService {
+    rpc ReceivceOrder (Order) returns (KitchenResponse) {}
+}
+
+message Order {
+    string id = 1;
+    string order = 2;
+}
+
+message KitchenResponse {
+    string message = 1;
+}
